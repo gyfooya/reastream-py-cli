@@ -1,0 +1,14 @@
+[Unit]
+Description=Raspberry Pi 4 Python Script
+After=multi-user.target
+
+[Service]
+Type=simple
+User=alarm
+WorkingDirectory=/home/alarm/REASTREAM-RX
+ExecStart=/home/alarm/REASTREAM-RX/venv/bin/python /home/alarm/REASTREAM-RX/rpi4.py
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
